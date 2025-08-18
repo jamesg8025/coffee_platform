@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: coffee_platform_db
+    environment:
+      POSTGRES_DB: coffee_platform
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - coffee_platform_network
+
+  backend:
+    build: ./backend
+    container_name: coffee_platform_backend
+    depends_on:
+      - postgres
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/coffee_platform
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    ports:
+      - "8080:8080"
+    networks:
+      - coffee_platform_network
+
+volumes:
+  postgres_data:
+
+networks:
+  coffee_platform_network:
+    driver: bridge
