@@ -6,7 +6,7 @@ A modern, full-stack web application built with microservices architecture for c
 
 Currently implementing Phase 1 (Foundation & Core Backend) - Building TypeScript microservices with authentication and core APIs. This project represents a comprehensive learning journey through modern web development technologies and practices.
 
-## 🛠️ Modern Tech Stack
+## 🛠️ Tech Stack
 
 **Backend Microservices:**
 - Node.js 20+ with TypeScript 5+
@@ -234,10 +234,10 @@ This is primarily a personal learning project, but feedback and suggestions are 
 
 ## 📬 Contact
 
-- **Developer**: [James Gonzalez]
-- **Email**: [jamesg8025@gmail.com]
-- **LinkedIn**: [http://linkedin/in/gonzalez-james]
-- **Portfolio**: [http://jamesg8025.github.io]
+- **Developer**: James Gonzalez
+- **Email**: jamesg8025@gmail.com
+- **LinkedIn**: http://linkedin/in/gonzalez-james
+- **Portfolio**: http://jamesg8025.github.io
 
 ---
 
